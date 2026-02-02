@@ -8,6 +8,12 @@ FROM student;
 
 
 --숙제완료함
+SELECT ename || '''s sal is $' || sal AS "Name And Sal"
+FROM emp;
+
+
+
+
 
 select name || '의 아이디는 ' || id as 전체설명
     ,grade as "학년"
