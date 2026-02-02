@@ -1,9 +1,10 @@
--- 1)professor ���̺� ��ü �÷� ��ȸ
+-- 1)professor 테이블 전체 컬럼 조회
 SELECT *
 FROM professor;
 
--- 2)�л� -> �л���ȣ ,�̸� ,�г�
+-- 2)학생 -> 학생번호 ,이름 ,학년
 SELECT STUDNO,NAME,GRADE
 FROM student;
 
 
+--숙제완료함
