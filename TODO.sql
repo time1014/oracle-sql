@@ -26,7 +26,7 @@ where comm is not null;
 
 
 --113page(nv12)
-select empno , ename , comm , decode(deptno,30,decode(comm,null,'Exist','NULL')) as NVL2
+select empno , ename , comm , decode(deptno,30,decode(comm,null,'NULL','EXIST')) as NVL2
 from emp
 where deptno = 30
 order by empno;
