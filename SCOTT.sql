@@ -8,9 +8,6 @@ FROM student;
 
 
 --숙제완료함
-SELECT ename || '''s sal is $' || sal AS "Name And Sal"
-FROM emp;
-
 
 
 
