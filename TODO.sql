@@ -36,6 +36,10 @@ order by empno;
                              7~9 => 3/4분기
                              10~12 => 4/4분기
                              
+                             
+select name
+       ,ceil(to_char(birthday , 'MM')/3) || '/4분기'
+from student;
 
 select name , birthday 
        ,decode(
@@ -66,5 +70,9 @@ select name , birthday
        '4/4분기'
 )as 생일분기                           
 from student;
+
+
+
+
 
                              
