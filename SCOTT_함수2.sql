@@ -108,3 +108,4 @@ select deptno
 from emp
 group by rollup(deptno,job)
 order by 1;
+
