@@ -24,8 +24,7 @@ select max(board_no)+1 from board;
 
 -- 외워라 :?  => 입력하는 값
 update board
-set click_cnt = click_cnt + 1
-       ,title = :title
+set    title = :title
        ,content = :content
 where board_no = :bno;
 
@@ -102,5 +101,7 @@ insert (icode,iname,price,idescription) values (tbl2.icode,tbl2.iname,tbl2.price
 select *
 from board;
 
+insert into board(board_no,title,writer,content) values(1,'asd','zxc','zxc');
+insert into board(board_no,title,writer,content) values((select max(board_no) from board)+1,'asd','zxc','zxc');
 
 
