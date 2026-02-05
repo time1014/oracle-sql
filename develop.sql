@@ -98,3 +98,9 @@ update set
        ,tbl1.idescription = tbl2.idescription
 when not matched then
 insert (icode,iname,price,idescription) values (tbl2.icode,tbl2.iname,tbl2.price,tbl2.idescription);
+
+select *
+from board;
+
+
+
