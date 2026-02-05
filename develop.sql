@@ -75,3 +75,26 @@ insert into product_tbl values('S005','사탕2',3000,'다른사탕',3.5,'오리�
 select *
 from product_tbl;
        
+       
+--merge into table1
+--using table2
+--on 병합조건
+--when matched then
+--update 
+--when not matched then
+-- insert
+
+merge into product_tbl tbl1
+using(select 'S005' icode
+       ,'지우개2' iname
+       ,2200 price
+       ,'글씨 지우는거2' idescription
+       from dual)tbl2
+on (tbl1.icode = tbl2.icode)
+when matched then 
+update set
+       tbl1.iname = tbl2.iname
+       ,tbl1.price = tbl2.price
+       ,tbl1.idescription = tbl2.idescription
+when not matched then
+insert (icode,iname,price,idescription) values (tbl2.icode,tbl2.iname,tbl2.price,tbl2.idescription);
